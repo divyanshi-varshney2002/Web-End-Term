@@ -14,31 +14,15 @@ const socketio = require("socket.io");
 const io = socketio(server);
 const Chat = require("./models/chat");
 
-// mongoose
-//   .connect("mongodb://localhost:27017/twitter-clone", {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     useCreateIndex: true,
-//     useFindAndModify: false,
-//   })
-//   .then(() => console.log("DB Connected"))
-//   .catch(() => console.log(err));
-mongoose.connect(dbUrl, { useNewUrlParser: true,useUnifiedTopology: true })
-.then(()=> console.log(" DB CONNECTED!"))
-.catch((err)=> console.log(err));
-
-
-if(process.env.NODE_ENV !="production")
-{
-  require("dotenv").config({path:"./config.env"})
-}
-const mongoose = require("mongoose");
-const Product = require("./models/Product")
-// const dbUrl=process.env.DB_URI
-mongoose.set('strictQuery', true);
-mongoose.connect(process.env.DB_URI)
-.then(()=> console.log(" DB CONNECTED!"))
-.catch((err)=> console.log(err));
+mongoose
+  .connect("mongodb://127.0.0.1:27017/twitter-clone", {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true,
+    useFindAndModify: false,
+  })
+  .then(() => console.log("DB Connected"))
+  .catch((err) => console.log(err));
 
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "/views"));
@@ -106,6 +90,6 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(process.env.PORT||3000, () => {
-  console.log("Server running at port 3000");
+server.listen(process.env.PORT||4000, () => {
+  console.log("Server running at port 4000");
 });

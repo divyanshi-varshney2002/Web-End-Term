@@ -1,13 +1,13 @@
 :root {
-  --blue: #1fa2f1;
+  --blue: #1790db;
   --buttonHoverBg: #d4edff;
-  --lightGrey: rgb(230, 236, 240);
+  --lightGrey: rgb(208, 210, 212);
   --spacing: 15px;
-  --greyText: rgb(101, 119, 134);
-  --greyButtonText: rgba(0, 0, 0, 0.34);
-  --red: rgb(226, 34, 94);
+  --greyText: rgb(82, 99, 113);
+  --greyButtonText: rgba(0, 0, 0, 0.262);
+  --red: rgb(201, 18, 76);
   --redBackground: rgba(226, 34, 94, 0.1);
-  --green: rgb(23, 191, 99);
+  --green: rgb(17, 177, 89);
   --greenBackground: rgba(23, 191, 99, 0.1);
 }
 
@@ -21,9 +21,9 @@ nav {
 nav a {
   display: block;
   padding: 10px;
-  font-size: 30px;
-  width: 55px;
-  height: 55px;
+  font-size: 32px;
+  width: 56px;
+  height: 56px;
   display: flex;
   justify-content: center;
   align-items: center;
